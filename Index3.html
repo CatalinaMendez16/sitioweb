@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Ladino</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        /* Estilos del fondo de la imagen */
+        .hero-section {
+            background-image: url(Imagenes/FondoDiego.jpeg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .profile-img-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            position: relative;
+        }
+
+        .profile-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .text-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar-brand,
+        .btn {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-outline-light {
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-brand:hover,
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons a {
+            color: #000;
+            margin: 0 15px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+        }
+
+        .red-underline {
+            border-bottom: 3px solid #ff0000;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #666;
+            border-radius: 50%;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-indicators button {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #666;
+        }
+
+        .rounded:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0.5rem 0;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #2B4570;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-section d-flex flex-column">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="btn btn-outline-light ms-auto" onclick="window.location.href='Hoja de vida Diego.pdf';">DESCARGAR MI HV COMPLETO</button>
+            </div>
+        </nav>
+
+        <div class="container flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center text-white text-container">
+            <h1 class="display-1 fw-bold mb-3">Diego Ladino</h1>
+            <p class="lead text-uppercase mb-5">Ingeniero de sistemas</p>
+            <div class="profile-img-container">
+                <img src="Imagenes/Diego.png" alt="Catalina" class="profile-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="container-fluid py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Primer Slide - Sobre Mí -->
+                    <div class="carousel-item active">
+                        <div class="about-content">
+                            <div class="text-center mb-5">
+                                <h2 class="section-title">
+                                    <span class="red-underline">SOBRE MÍ</span>
+                                </h2>
+                            </div>
+
+                            <!-- Iconos sociales -->
+                            <div class="text-center mb-5">
+                                <div class="social-icons">
+                                    <a href="https://www.instagram.com/diegolad98/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/diego.ladino.9?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <p class="text-dark">
+                                        Capacitado para trabajar en oficios varios, con conocimientos en 
+                                        instalación de aplicaciones y mantenimiento de equipos de cómputo. 
+                                        Con adaptabilidad al cambio e iniciativa para actuar proactivamente 
+                                        marcando el rumbo mediante acciones concretas anticipando a las 
+                                        situaciones con una visión a largo plazo. 
+                                    </p>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <p class="text-dark">
+                                        Competencias en resolución conflictos y problemas comerciales, además 
+                                        cuenta con aptitudes en orientación al cliente, calidad de trabajo e integridad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <!-- Segundo Slide - Experiencia -->
+                    <div class="carousel-item">
+                        <div class="row mt-5">
+                            <div class="col-12 text-center mb-4">
+                                <h2 class="section-title">
+                                    <span class="red-underline">EXPERIENCIA</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="experience-date"><strong>2018 - 2020</strong></div>
+                                <div class="experience-title"> <strong>Asesor comercial y técnico de mantenimiento en sistemas de cómputo </strong></div>
+                                <div class="experience-company"> <strong>Compubay</strong></div>
+                                <p class="text-dark">
+                                    Ofrecer asesoramiento experto a cada cliente detectando sus necesidades.
+                                    Mantenimiento preventivo, correctivo y predictivo de equipos, instalación de software y soluciones informáticas.
+                                    
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="experience-date"><strong>Marzo 2021 - Agosto 2021</strong></div>
+                                <div class="experience-title"><strong>Práctica Profesional – Soporte técnico</strong></div>
+                                <div class="experience-company"><strong>Colegio COFREM Guamal   </strong></div>
+                                <p class="text-dark">
+                                        Soporte técnico y mantenimiento preventivo, correctivo y predictivo de equipos.
+                                        Diagnóstico de red e instalación de impresoras en red y USB.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row mt-5">
+                            <div class="col-12 text-center mb-4">
+                                <h2 class="section-title">
+                                    <span class="red-underline">FORMACIÓN</span>
+                                </h2>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <!-- Columna izquierda -->
+                            <div class="col-md-6">
+                                <div class="experience-date"><strong>2015</strong></div>
+                                <div class="experience-title"><strong>Bachiller académico</strong></div>
+                                <div class="experience-company">Colegio COFREM Acacías</div>
+                            </div>
+                    
+                            <!-- Columna derecha -->
+                            <div class="col-md-6">
+                                <div class="experience-date"><strong>2021</strong></div>
+                                <div class="experience-title"><strong>Técnico laboral en mantenimiento de equipos de cómputo</strong></div>
+                                <div class="experience-company">Instituto técnico COFREM</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    <!-- Cuarta Slide - Aficiones / Intereses -->
+                    <div class="carousel-item mb-5">
+                        <div class="row mt-5">
+                            <div class="col-12 text-center mb-4">
+                                <h2 class="section-title">
+                                    <span class="red-underline">AFICIONES / INTERESES</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="row text-center">
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-laptop fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Aprender tecnología</p>
+                            </div>
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-bicycle fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Montar bicicleta</p>
+                            </div>
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-walking fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Caminar</p>
+                            </div>
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-film fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Ver peliculas</p>
+                            </div>
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-theater-masks fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Ir a cine</p>
+                            </div>
+                            <div class="col-4 col-md-2 mb-4">
+                                <div class="bg-light rounded-circle p-4 mx-auto" style="width: 120px; height: 120px;">
+                                    <i class="fas fa-headphones fa-3x text-dark"></i>
+                                </div>
+                                <p class="mt-2">Escuchar música</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles del Carrusel  -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Aptitudes -->
+    <section class="py-5 pt-5" style="background-image:url(Imagenes/AptitudesDiego.jpeg);">
+        <div class="container">
+            <!-- Titulo de la sección -->
+            <h2 class="text-center text-white mb-5 display-5 fw-bold">APTITUDES</h2>
+            
+            <div class="row g-4">
+                <!-- Columna izquierda-->
+                <div class="col-md-6">
+                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                        <h4 class="text-white">Ética laboral</h4>
+                    </div>
+                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                        <h4 class="text-white">Responsabilidad</h4>
+                    </div>
+                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                        <h4 class="text-white">Resolución de problemas</h4>
+                    </div>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="col-md-6">
+                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                        <h4 class="text-white">Pensamiento creativo</h4>
+                    </div>
+                    <div class="p-4 mb-4 rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                        <h4 class="text-white">Atención al detalle</h4>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Columna de información -->
+    <section class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 p-5" style="background-color: #2B4570;">
+                <div class="container">
+                    <h2 class="text-white mb-4">
+                        INFORMACIÓN
+                        <div class="mt-2" style="width: 50px; height: 3px; background-color: #dc3545;"></div>
+                    </h2>
+
+                    <div class="text-white mt-5">
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Teléfono</h5>
+                            <p>3212905161</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Email</h5>
+                            <p>diegoladino40@gmail.com</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="fw-bold">Dirección</h5>
+                            <p>Acacias, Meta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna de contacto -->
+            <div class="col-md-6 p-5" style="background-color: #E8EEF4;">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <h2>
+                            CONTACTO
+                            <div class="mt-2" style="width: 50px; height: 3px; background-color: #dc3545;"></div>
+                        </h2>
+                        <button class="btn btn-outline-dark" onclick="window.location.href='Hoja de vida Diego.pdf';">DESCARGAR MI HV COMPLETO</button>
+                    </div>
+
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Nombre *" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Apellido *" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control" placeholder="Email *" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" placeholder="Asunto *" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Mensaje *" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-dark px-4">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container">
+            <!-- Botón de descarga de HV -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-dark" onclick="window.location.href='Hoja de vida Diego.pdf';">DESCARGAR MI HV COMPLETO</button>
+            </div>
+
+            <!-- Contenido del Footer -->
+            <div class="row align-items-center">
+                <!-- Copyright -->
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2024 Creado por Catalina, Diego y Juan </p>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <span class="me-3">Sígueme en redes sociales</span>
+                    <a href="https://www.instagram.com/diegolad98/"
+                        class="text-dark me-2"
+                        style="background: #000; color: #fff !important; padding: 8px; border-radius: 50%; display: inline-flex; width: 35px; height: 35px; align-items: center; justify-content: center;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/diego.ladino.9?mibextid=ZbWKwL" class="text-dark"
+                        style="background: #000; color: #fff !important; padding: 8px; border-radius: 50%; display: inline-flex; width: 35px; height: 35px; align-items: center; justify-content: center;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
